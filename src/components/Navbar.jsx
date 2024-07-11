@@ -1,8 +1,21 @@
 export const Navbar = () => {
   return (
     <nav className="navbar" id="navbar">
-      <div className="navbar__item-container">
-        <div className="navbar__brand-title">snap</div>
+      <div className="navbar__brand-title">snap</div>
+
+      <button className="navbar__open">
+        <img src="/images/icon-menu.svg" alt="" width={"40"} height={"24"} />
+      </button>
+
+      <div className="navbar__menu">
+        <button className="navbar__close">
+          <img
+            src="/images/icon-close-menu.svg"
+            alt=""
+            width={"28"}
+            height={"27"}
+          />
+        </button>
 
         <ul className="navbar__links">
           <li className="navbar__item">
@@ -29,12 +42,16 @@ export const Navbar = () => {
             </a>
           </li>
         </ul>
-      </div>
 
-      <div className="navbar__auth">
-        <a href="" className="login">Login</a>
+        <div className="navbar__auth">
+            <a href="" className="login">
+              Login
+            </a>
 
-        <a href="" className="register">Register</a>
+            <a href="" className="register">
+              Register
+            </a>
+          </div>
       </div>
     </nav>
   );
