@@ -1,90 +1,57 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0.75rem 2rem 0 2rem;
+  padding: 30px 5%;
 
   &__brand-title {
-    font-size: 1.5rem;
-    margin: 0 3rem 0 0;
+    cursor: pointer;
+    margin-right: 2rem;
   }
 
-  &__menu {
-    display: flex;
-    
-    @media (width < 40em) {
-      position: fixed;
-      inset: 0;
-      padding: 1.5rem;
-      background-color: hsl(0, 0%, 98%);
-      translate: 100vw 0;
-      transition: translate 0.5s ease-in-out;
-    }
-  }
-
-  button {
-    background: none;
-    border: none;
-    padding: 0;
-
-    @media (width >= 40em) {
-      display: none;
-    }
-  }
-
-  &__close {
-    display: block;
-    margin-inline-start: auto;
-
-    img {
-      width: 2.5rem;
-    }
-  }
-
-  //   Unordered list
   &__links {
-    margin: 0;
-    padding: 0;
-    display: flex;
-
-    @media (width < 40em) {
-      flex-direction: column;
-      align-items: center;
-    }
-  }
-
-  //   List Items
-  &__item {
     list-style: none;
   }
 
-  //   Anchor tags
+  &__item {
+    display: inline-block;
+    padding: 0px 20px;
+  }
+
   &__link {
-    text-decoration: none;
     color: hsl(0, 0%, 41%);
-    padding: 1rem;
-    display: block;
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
   }
 
   &__link:hover {
     color: hsl(0, 0%, 8%);
   }
 
-  &__auth {
-    /* a {
-      text-decoration: none;
+  /* &__auth {
+    margin-left: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: center;
+    gap: 1px;
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
       color: hsl(0, 0%, 41%);
-      padding: 0.5rem 1.25rem 0.5rem 1.25rem;
+      transition: all 0.3s ease 0s;
     }
 
-    a:hover {
+    button:hover {
       color: hsl(0, 0%, 8%);
     }
 
-    a[class="register"] {
-      border: 1px solid hsl(0, 0%, 8%);
-      border-radius: 10px;
-      margin: 0 0 0 1.5rem;
-    } */
-  }
+    a:nth-child(2) {
+      border: 1px solid black;
+      padding: 9px 25px;
+      border-radius: 50px;
+    }
+  } */
 }
