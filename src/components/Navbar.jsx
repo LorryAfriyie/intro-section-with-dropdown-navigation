@@ -4,9 +4,9 @@ export const Navbar = () => {
       <nav className="navbar" id="navbar">
         <div className="navbar__brand-title">snap</div>
 
-        {/* <button className="navbar__open">
+        <button className="navbar__open">
           <img src="/images/icon-menu.svg" alt="" width={"40"} height={"24"} />
-        </button> */}
+        </button>
 
         <div className="navbar__menu">
           {/* <button className="navbar__close">
@@ -42,21 +42,17 @@ export const Navbar = () => {
                 About
               </a>
             </li>
-
-            <li className="navbar__item">
-              <a href="">
-                <button className="login">Login</button>
-              </a>
-            </li>
-            <li className="navbar__item">
-              <a href="">
-                <button className="register">Register</button>
-              </a>
-            </li>
           </ul>
         </div>
 
-        <div className="navbar__auth"></div>
+        <div className="navbar__auth">
+          <a href="">
+            <button className="login">Login</button>
+          </a>
+          <a href="">
+            <button className="register">Register</button>
+          </a>
+        </div>
       </nav>
     </header>
   );

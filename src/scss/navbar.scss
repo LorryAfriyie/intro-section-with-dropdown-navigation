@@ -1,12 +1,16 @@
 .navbar {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   padding: 30px 5%;
 
   &__brand-title {
     cursor: pointer;
     margin-right: 2rem;
+  }
+
+  &__menu {
+    margin-right: auto;
   }
 
   &__links {
@@ -16,6 +20,10 @@
   &__item {
     display: inline-block;
     padding: 0px 20px;
+
+    @media (width < 50em) {
+      display: none;
+    }
   }
 
   &__link {
@@ -28,8 +36,7 @@
     color: hsl(0, 0%, 8%);
   }
 
-  /* &__auth {
-    margin-left: auto;
+  &__auth {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -53,5 +60,22 @@
       padding: 9px 25px;
       border-radius: 50px;
     }
-  } */
+
+    @media (width < 50em) {
+      display: none;
+    }
+  }
+
+  &__open {
+    position: absolute;
+    right: 1rem;
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+
+    @media (width < 50em) {
+      display: flex;
+    }
+  }
 }
