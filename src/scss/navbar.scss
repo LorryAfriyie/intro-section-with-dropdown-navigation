@@ -4,6 +4,11 @@
   align-items: center;
   padding: 30px 5%;
 
+  @media (width < 50em) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
   &__brand-title {
     cursor: pointer;
     margin-right: 2rem;
@@ -11,10 +16,19 @@
 
   &__menu {
     margin-right: auto;
+
+    @media (width < 50em) {
+      margin-left: auto;
+      margin-right: 0;
+    }
   }
 
   &__links {
     list-style: none;
+
+    @media (width < 50em) {
+      //display: none;
+    }
   }
 
   &__item {
@@ -22,7 +36,7 @@
     padding: 0px 20px;
 
     @media (width < 50em) {
-      display: none;
+      display: flex;
     }
   }
 
@@ -38,7 +52,8 @@
 
   &__auth {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    margin-left: auto;
+
     align-items: center;
     text-align: center;
     gap: 1px;
@@ -58,11 +73,15 @@
     a:nth-child(2) {
       border: 1px solid black;
       padding: 9px 25px;
-      border-radius: 50px;
+      border-radius: 13px;
+    }
+
+    @media (min-width: 50em) {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     @media (width < 50em) {
-      display: none;
+      //display: none;
     }
   }
 
