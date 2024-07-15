@@ -1,43 +1,43 @@
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 30px 5%;
 
-  @media (width < 50em) {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
   &__brand-title {
     cursor: pointer;
-    margin-right: 2rem;
   }
 
   &__menu {
-    margin-right: auto;
+    display: flex;
+    width: 100%;
 
     @media (width < 50em) {
-      margin-left: auto;
-      margin-right: 0;
+      flex-direction: column;
+    }
+
+    @media (width < 50em) {
+      background: blue;
+      position: fixed;
+      inset: 0;
+      translate: 100vw 0;
+      transition: translate 0.5s ease-in-out;
     }
   }
 
   &__links {
     list-style: none;
+    align-self: center;
+    display: flex;
+    gap: 1rem;
 
     @media (width < 50em) {
-      //display: none;
+      flex-direction: column;
     }
   }
 
   &__item {
     display: inline-block;
     padding: 0px 20px;
-
-    @media (width < 50em) {
-      display: flex;
-    }
   }
 
   &__link {
@@ -51,17 +51,11 @@
   }
 
   &__auth {
-    display: grid;
-    margin-left: auto;
-
-    align-items: center;
+    display: flex;
     text-align: center;
-    gap: 1px;
+    align-items: center;
 
     button {
-      border: none;
-      background: none;
-      cursor: pointer;
       color: hsl(0, 0%, 41%);
       transition: all 0.3s ease 0s;
     }
@@ -77,12 +71,23 @@
     }
 
     @media (min-width: 50em) {
+      margin-left: auto;
       grid-template-columns: repeat(2, 1fr);
     }
 
     @media (width < 50em) {
-      //display: none;
+      flex-direction: column;
+      a:nth-child(2) {
+        width: 100%;
+      }
     }
+  }
+
+  button {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
   }
 
   &__open {
@@ -94,6 +99,26 @@
     display: none;
 
     @media (width < 50em) {
+      display: flex;
+    }
+  }
+
+  &__open[aria-expanded="true"] {
+    + .navbar__menu {
+      translate: 0;
+    }
+  }
+
+  &__close {
+    margin-inline-start: auto;
+    margin-block-end: 8rem;
+    display: none;
+    
+    img {
+      width: 2.5rem;
+    }
+
+    @media (width <= 50em) {
       display: flex;
     }
   }
