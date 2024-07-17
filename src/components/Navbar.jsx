@@ -2,20 +2,33 @@ import { useEffect } from "react";
 import { useRef } from "react";
 
 export const Navbar = () => {
-  const btnOpen = useRef(null);
-  const btnClose = useRef(null);
+  const menu = useRef(null),
+    body = document.querySelector("body"),
+    btnOpen = useRef(null),
+    btnClose = useRef(null);
 
   useEffect(() => {
     function openMenu() {
       btnOpen.current.setAttribute("aria-expanded", "true");
+      menu.current.removeAttribute("inert");
+      menu.current.removeAttribute("style");
+      btnClose.current.focus();
+      body.classList.add("overlay");
     }
 
     function closeMenu() {
       btnOpen.current.setAttribute("aria-expanded", "false");
+      menu.current.setAttribute("inert", "");
+      btnClose.current.focus();
+      body.classList.remove("overlay");
+
+      setTimeout(() => {
+        menu.current.style.transition = "none";
+      }, 500);
     }
 
     btnOpen.current.addEventListener("click", openMenu);
-    
+
     btnClose.current.addEventListener("click", closeMenu);
   });
 
@@ -36,7 +49,12 @@ export const Navbar = () => {
           <img src="/images/icon-menu.svg" alt="" width={"40"} height={"24"} />
         </button>
 
-        <div className="navbar__menu" role="dialog" aria-labelledby="nav-label">
+        <div
+          className="navbar__menu"
+          role="dialog"
+          aria-labelledby="nav-label"
+          ref={menu}
+        >
           <button className="navbar__close" ref={btnClose} aria-label="close">
             <img src="/images/icon-close-menu.svg" alt="" />
           </button>

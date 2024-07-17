@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   padding: 30px 5%;
+  padding-block: 1.5rem;
 
   &__brand-title {
     cursor: pointer;
@@ -19,11 +20,12 @@
     }
 
     @media (width < 50em) {
-      background: blue;
+      background: hsl(0, 0%, 98%);
       position: fixed;
       inset: 0;
       translate: 100vw 0;
       transition: translate 0.5s ease-in-out;
+      z-index: 1;
     }
   }
 
@@ -35,12 +37,16 @@
 
     @media (width < 50em) {
       flex-direction: column;
+      margin-right: auto;
+      padding-left: 1.25rem;
+      margin-block-end: 2rem;
     }
   }
 
   &__item {
     display: inline-block;
-    padding: 0px 20px;
+    padding: 0px 10px;
+    margin-block-end: 0.5rem;
   }
 
   &__link {
@@ -75,13 +81,16 @@
 
     @media (min-width: 50em) {
       margin-left: auto;
-      grid-template-columns: repeat(2, 1fr);
     }
 
     @media (width < 50em) {
       flex-direction: column;
-      a:nth-child(2) {
-        width: 100%;
+      align-items: flex-start;
+      padding: 0 40px 0 23px;
+
+      a {
+        width: 65%;
+        margin-bottom: 1rem;
       }
     }
   }
@@ -108,15 +117,16 @@
 
   &__open[aria-expanded="true"] {
     + .navbar__menu {
-      translate: 0;
+      translate: 35vw 0;
     }
   }
 
   &__close {
     margin-inline-start: auto;
-    margin-block-end: 8rem;
+    margin-block-end: 3rem;
+    margin-right: 9.5rem;
     display: none;
-    
+
     img {
       width: 2.5rem;
     }
