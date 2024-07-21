@@ -41,12 +41,18 @@ export const Navbar = () => {
           Navigation
         </span>
         <button
+          type="button"
           ref={btnOpen}
           className="navbar__open"
           aria-expanded="false"
           aria-labelledby="nav-label"
         >
-          <img src="/images/icon-menu.svg" alt="" width={"40"} height={"24"} />
+          <img
+            src="/images/icon-menu.svg"
+            alt="open-button"
+            width={"40"}
+            height={"24"}
+          />
         </button>
 
         <div
@@ -55,8 +61,13 @@ export const Navbar = () => {
           aria-labelledby="nav-label"
           ref={menu}
         >
-          <button className="navbar__close" ref={btnClose} aria-label="close">
-            <img src="/images/icon-close-menu.svg" alt="" />
+          <button
+            type="button"
+            className="navbar__close"
+            ref={btnClose}
+            aria-label="close"
+          >
+            <img src="/images/icon-close-menu.svg" alt="close-button" />
           </button>
 
           <ul className="navbar__links">

@@ -17,6 +17,7 @@
 
     @media (width < 40em) {
       flex-direction: column;
+      padding-top: 1.5rem;
     }
 
     @media (width < 40em) {
@@ -93,10 +94,10 @@
     @media (width < 40em) {
       flex-direction: column;
       align-items: flex-start;
-      padding: 0 40px 0 23px;
+      padding: 0 30px 0 20px;
 
       a {
-        width: 65%;
+        width: 80%;
         margin-bottom: 1rem;
       }
     }
@@ -112,9 +113,6 @@
   &__open {
     position: absolute;
     right: 1rem;
-    border: none;
-    background: none;
-    cursor: pointer;
     display: none;
 
     @media (width < 40em) {
@@ -124,14 +122,16 @@
 
   &__open[aria-expanded="true"] {
     + .navbar__menu {
-      translate: 35vw 0;
+      translate: 0;
+      margin-left: 5rem;
     }
   }
 
   &__close {
+    position: relative;
     margin-inline-start: auto;
     margin-block-end: 3rem;
-    margin-right: 9.5rem;
+    right: 6rem;
     display: none;
 
     img {
