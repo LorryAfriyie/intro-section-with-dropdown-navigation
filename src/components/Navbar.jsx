@@ -5,9 +5,17 @@ export const Navbar = () => {
   const menu = useRef(null),
     body = document.querySelector("body"),
     btnOpen = useRef(null),
-    btnClose = useRef(null);
+    btnClose = useRef(null),
+    link = useRef(null),
+    link2 = useRef(null);
 
   useEffect(() => {
+    function test(e) {
+      e.preventDefault();
+      //if (link2.current.classList.contains("active")) console.log("Has active");
+      link2.current.classList.toggle("active");
+    }
+
     function openMenu() {
       btnOpen.current.setAttribute("aria-expanded", "true");
       menu.current.removeAttribute("inert");
@@ -30,6 +38,8 @@ export const Navbar = () => {
     btnOpen.current.addEventListener("click", openMenu);
 
     btnClose.current.addEventListener("click", closeMenu);
+
+    link.current.addEventListener("click", test);
   });
 
   return (
@@ -72,14 +82,16 @@ export const Navbar = () => {
 
           <ul className="navbar__links">
             <li className="navbar__item">
-              <a href="" className="navbar__link">
+              <a href="" className="navbar__link" ref={link}>
                 Features
+                <img src="images/icon-arrow-down.svg" alt="" />
               </a>
             </li>
 
             <li className="navbar__item">
-              <a href="" className="navbar__link">
+              <a href="" className="navbar__link" ref={link2}>
                 Companies
+                <img src="images/icon-arrow-down.svg" alt="" />
               </a>
             </li>
 
