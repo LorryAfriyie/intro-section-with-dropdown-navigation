@@ -43,7 +43,6 @@ export const Navbar = () => {
   });
 
   return (
-    <header>
       <nav className="navbar" id="navbar">
         <div className="navbar__brand-title">snap</div>
 
@@ -118,6 +117,5 @@ export const Navbar = () => {
           </div>
         </div>
       </nav>
-    </header>
   );
 };
