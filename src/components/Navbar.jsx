@@ -7,13 +7,17 @@ export const Navbar = () => {
     btnOpen = useRef(null),
     btnClose = useRef(null),
     link = useRef(null),
-    link2 = useRef(null);
+    link2 = useRef(null),
+    dropdown = useRef(null);
 
   useEffect(() => {
     function test(e) {
       e.preventDefault();
       //if (link2.current.classList.contains("active")) console.log("Has active");
       link2.current.classList.toggle("active");
+
+      dropdown.current.style.opacity = "1";
+      dropdown.current.style.pointerEvents = "auto";
     }
 
     function openMenu() {
@@ -43,79 +47,98 @@ export const Navbar = () => {
   });
 
   return (
-      <nav className="navbar" id="navbar">
-        <div className="navbar__brand-title">snap</div>
+    <nav className="navbar" id="navbar">
+      <div className="navbar__brand-title">snap</div>
 
-        <span id="nav-label" hidden>
-          Navigation
-        </span>
+      <span id="nav-label" hidden>
+        Navigation
+      </span>
+      <button
+        type="button"
+        ref={btnOpen}
+        className="navbar__open"
+        aria-expanded="false"
+        aria-labelledby="nav-label"
+      >
+        <img
+          src="/images/icon-menu.svg"
+          alt="open-button"
+          width={"40"}
+          height={"24"}
+        />
+      </button>
+
+      <div
+        className="navbar__menu"
+        role="dialog"
+        aria-labelledby="nav-label"
+        ref={menu}
+      >
         <button
           type="button"
-          ref={btnOpen}
-          className="navbar__open"
-          aria-expanded="false"
-          aria-labelledby="nav-label"
+          className="navbar__close"
+          ref={btnClose}
+          aria-label="close"
         >
-          <img
-            src="/images/icon-menu.svg"
-            alt="open-button"
-            width={"40"}
-            height={"24"}
-          />
+          <img src="/images/icon-close-menu.svg" alt="close-button" />
         </button>
 
-        <div
-          className="navbar__menu"
-          role="dialog"
-          aria-labelledby="nav-label"
-          ref={menu}
-        >
-          <button
-            type="button"
-            className="navbar__close"
-            ref={btnClose}
-            aria-label="close"
-          >
-            <img src="/images/icon-close-menu.svg" alt="close-button" />
-          </button>
-
-          <ul className="navbar__links">
-            <li className="navbar__item">
+        <ul className="navbar__links">
+          <li className="navbar__item">
+            <div className="dropdown">
               <a href="" className="navbar__link" ref={link}>
                 Features
                 <img src="images/icon-arrow-down.svg" alt="" />
               </a>
-            </li>
 
-            <li className="navbar__item">
-              <a href="" className="navbar__link" ref={link2}>
-                Companies
-                <img src="images/icon-arrow-down.svg" alt="" />
-              </a>
-            </li>
+              <div className="dropdown__dropdown-menu" ref={dropdown}>
+                <ul>
+                  <li>
+                    <a href="#">Todo List</a>
+                  </li>
+                  <li>
+                    <a href="#">Calendar</a>
+                  </li>
+                  <li>
+                    <a href="#">Reminder</a>
+                  </li>
+                  <li>
+                    <a href="#">Planning</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </li>
 
-            <li className="navbar__item">
-              <a href="" className="navbar__link">
-                Careers
-              </a>
-            </li>
-
-            <li className="navbar__item">
-              <a href="" className="navbar__link">
-                About
-              </a>
-            </li>
-          </ul>
-
-          <div className="navbar__auth">
-            <a href="">
-              <button className="login">Login</button>
+          <li className="navbar__item">
+            <a href="" className="navbar__link" ref={link2}>
+              Companies
+              <img src="images/icon-arrow-down.svg" alt="" />
             </a>
-            <a href="">
-              <button className="register">Register</button>
+          </li>
+
+          <li className="navbar__item">
+            <a href="" className="navbar__link">
+              Careers
             </a>
-          </div>
+          </li>
+
+          <li className="navbar__item">
+            <a href="" className="navbar__link">
+              About
+            </a>
+          </li>
+        </ul>
+
+        <div className="navbar__auth">
+          <a href="">
+            <button className="login">Login</button>
+          </a>
+          <a href="">
+            <button className="register">Register</button>
+          </a>
         </div>
-      </nav>
+      </div>
+    </nav>
   );
 };
