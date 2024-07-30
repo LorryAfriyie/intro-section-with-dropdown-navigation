@@ -1,25 +1,13 @@
-import { useEffect } from "react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
+import { NavbarLinks, NavbarAuth } from "./NavbarLinks";
 
 export const Navbar = () => {
   const menu = useRef(null),
     body = document.querySelector("body"),
     btnOpen = useRef(null),
-    btnClose = useRef(null),
-    link = useRef(null),
-    link2 = useRef(null),
-    dropdown = useRef(null);
+    btnClose = useRef(null);
 
   useEffect(() => {
-    function test(e) {
-      e.preventDefault();
-      //if (link2.current.classList.contains("active")) console.log("Has active");
-      link2.current.classList.toggle("active");
-
-      dropdown.current.style.opacity = "1";
-      dropdown.current.style.pointerEvents = "auto";
-    }
-
     function openMenu() {
       btnOpen.current.setAttribute("aria-expanded", "true");
       menu.current.removeAttribute("inert");
@@ -42,8 +30,6 @@ export const Navbar = () => {
     btnOpen.current.addEventListener("click", openMenu);
 
     btnClose.current.addEventListener("click", closeMenu);
-
-    link.current.addEventListener("click", test);
   });
 
   return (
@@ -83,61 +69,9 @@ export const Navbar = () => {
           <img src="/images/icon-close-menu.svg" alt="close-button" />
         </button>
 
-        <ul className="navbar__links">
-          <li className="navbar__item">
-            <div className="dropdown">
-              <a href="" className="navbar__link" ref={link}>
-                Features
-                <img src="images/icon-arrow-down.svg" alt="" />
-              </a>
+        <NavbarLinks />
 
-              <div className="dropdown__dropdown-menu" ref={dropdown}>
-                <ul>
-                  <li>
-                    <a href="#">Todo List</a>
-                  </li>
-                  <li>
-                    <a href="#">Calendar</a>
-                  </li>
-                  <li>
-                    <a href="#">Reminder</a>
-                  </li>
-                  <li>
-                    <a href="#">Planning</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </li>
-
-          <li className="navbar__item">
-            <a href="" className="navbar__link" ref={link2}>
-              Companies
-              <img src="images/icon-arrow-down.svg" alt="" />
-            </a>
-          </li>
-
-          <li className="navbar__item">
-            <a href="" className="navbar__link">
-              Careers
-            </a>
-          </li>
-
-          <li className="navbar__item">
-            <a href="" className="navbar__link">
-              About
-            </a>
-          </li>
-        </ul>
-
-        <div className="navbar__auth">
-          <a href="">
-            <button className="login">Login</button>
-          </a>
-          <a href="">
-            <button className="register">Register</button>
-          </a>
-        </div>
+        <NavbarAuth />
       </div>
     </nav>
   );

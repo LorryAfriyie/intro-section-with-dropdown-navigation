@@ -8,12 +8,12 @@
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     padding: 0 1.5rem 0 1.5rem;
     border-radius: 0.5rem;
-    pointer-events: none;
+    pointer-events: auto;
     width: max-content;
     top: calc(100% + 1rem);
     right: 0;
     font-size: 0.8rem;
-    opacity: 0;
+    opacity: 1;
     transform: translateY(-10px);
     transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
 
@@ -30,6 +30,20 @@
           color: hsl(0, 0%, 41%);
         }
       }
+    }
+  }
+
+  @media (width < 40em) {
+    width: 100%;
+
+    &__dropdown-menu {
+      top: 0;
+      position: relative;
+      transform: none;
+      width: 100%;
+      box-shadow: none;
+      border-radius: 0%;
+      padding: 0;
     }
   }
 }
