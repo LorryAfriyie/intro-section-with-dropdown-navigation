@@ -28,7 +28,7 @@ const NavbarLinks = () => {
       <li className="navbar__item">
         <div className="dropdown">
           <a href="#" className="navbar__link" onClick={() => setOpen2(!open2)}>
-            Companies
+            Company
           </a>
 
           {open2 ? (

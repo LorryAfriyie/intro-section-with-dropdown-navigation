@@ -34,13 +34,14 @@
     list-style: none;
     align-self: center;
     display: flex;
-    gap: 1rem;
+    gap: 2rem;
 
     @media (width < 40em) {
       flex-direction: column;
       margin-right: auto;
       padding-left: 1.25rem;
       margin-block-end: 2rem;
+      gap: 1rem;
     }
   }
 
@@ -130,13 +131,9 @@
   &__close {
     position: relative;
     margin-inline-start: auto;
-    margin-block-end: 3rem;
+    margin-block-end: 1rem;
     right: 9rem;
     display: none;
-
-    img {
-      width: 2.5rem;
-    }
 
     @media (width <= 40em) {
       display: flex;
