@@ -21,7 +21,7 @@
     }
 
     @media (width < 40em) {
-      background: hsl(0, 0%, 98%);
+      background: var(--clr-almost-white);
       position: fixed;
       inset: 0;
       translate: 100vw 0;
@@ -55,13 +55,13 @@
   }
 
   &__link {
-    color: hsl(0, 0%, 41%);
+    color: var(--clr-almost-gray);
     transition: all 0.3s ease 0s;
     text-decoration: none;
   }
 
   &__link:hover {
-    color: hsl(0, 0%, 8%);
+    color: var(--clr-almost-black);
   }
 
   &__auth {
@@ -75,7 +75,7 @@
     }
 
     button:hover {
-      color: hsl(0, 0%, 8%);
+      color: var(--clr-almost-black);
     }
 
     a:nth-child(2) {

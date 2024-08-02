@@ -1,22 +1,37 @@
-@import "navbar";
-@import "dropdown";
-@import "hero";
+@use "navbar";
+@use "dropdown";
+@use "hero";
 
 @import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap");
 
+:root {
+  --ff-body: "Epilogue", sans-serif;
+
+  --clr-almost-white: hsl(0, 0%, 98%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-almost-gray: hsl(0, 0%, 41%);
+  --clr-almost-black: hsl(0, 0%, 8%);
+  --clr-overlay: rgba(36, 20, 38, 0.5);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 * {
   box-sizing: border-box;
-  font-family: "Epilogue", sans-serif;
+  font-family: var(--ff-body);
 }
 
 body {
-  background-color: hsl(0, 0%, 98%);
+  background-color: var(--clr-almost-white);
   margin: 0;
   padding: 0;
 }
 
 .overlay {
-  background: rgba(36, 20, 38, 0.5);
+  background: var(--clr-overlay);
   height: "100%";
   width: "100%";
 }

@@ -7,8 +7,8 @@
 
   &__dropdown-menu {
     position: absolute;
-    color: hsl(0, 0%, 41%);
-    background-color: hsl(0, 0%, 100%);
+    color: var(--clr-almost-gray);
+    background-color: var(--clr-white);
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.1);
     padding: 0.5rem 1.25rem 0.5rem 1.25rem;
     border-radius: 0.75rem;
@@ -31,7 +31,7 @@
 
         a {
           text-decoration: none;
-          color: hsl(0, 0%, 41%);
+          color: var(--clr-almost-gray);
         }
       }
     }
@@ -53,8 +53,6 @@
       border-radius: 0%;
       padding: 0;
       margin: 0 0 0 1.25rem;
-
-      
     }
   }
 }

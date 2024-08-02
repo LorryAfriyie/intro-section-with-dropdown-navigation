@@ -3,13 +3,15 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(2, 1fr);
-    width: 100%;
   }
 
-  &__info {
+  /* &__info {
+  }
+
+  &__img-container {
   }
 
   &__img-container::after {
     content: url("/images/image-hero-desktop.png");
-  }
+  } */
 }
