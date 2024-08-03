@@ -2,16 +2,30 @@
   &__content-grid {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(2, 1fr);
+    width: min(100% - 2rem, 58rem);
+    margin-inline: auto;
+
+    height: 100vh;
+
+    @media (min-width: 40em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
-  /* &__info {
+  &__info {
+    place-content: center;
   }
 
   &__img-container {
+    background-image: url("/images/image-hero-desktop.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
   }
 
-  &__img-container::after {
-    content: url("/images/image-hero-desktop.png");
-  } */
+  &__client-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+  }
 }
