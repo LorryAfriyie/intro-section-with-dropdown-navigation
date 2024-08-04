@@ -5,7 +5,7 @@
     width: min(100% - 2rem, 58rem);
     margin-inline: auto;
 
-    height: 100vh;
+    //height: 100vh;
 
     @media (min-width: 40em) {
       grid-template-columns: repeat(2, 1fr);
@@ -17,10 +17,16 @@
   }
 
   &__img-container {
-    background-image: url("/images/image-hero-desktop.png");
+    /* background-image: url("/images/image-hero-desktop.png");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: contain;
+    background-size: contain; */
+    
+    img {
+      display: flex;
+      width: 100%;
+      margin: auto;
+    }
   }
 
   &__client-grid {

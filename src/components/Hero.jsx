@@ -19,7 +19,9 @@ export const Hero = () => {
             <img src="images/client-maker.svg" alt="" />
           </div>
         </div>
-        <div className="hero__img-container"></div>
+        <div className="hero__img-container">
+          <img src="images/image-hero-desktop.png" alt="" />
+        </div>
       </div>
     </main>
   );
