@@ -1,8 +1,10 @@
 .hero {
+  height: 100%;
   &__content-grid {
     display: grid;
+    gap: 3rem;
     justify-content: center;
-    width: min(100% - 2rem, 58rem);
+    max-width: 1000px;
     margin-inline: auto;
 
     //height: 100vh;
@@ -14,6 +16,39 @@
 
   &__info {
     place-content: center;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__main-text {
+    margin-bottom: auto;
+    margin-block-end: 0.5rem;
+    font-size: 5rem;
+  }
+
+  &__sub-text {
+    font-size: 1.25rem;
+    color: var(--clr-almost-gray);
+    margin-block-end: 3rem;
+  }
+
+  &__learn-btn {
+    margin-inline-end: auto;
+    background: none;
+    border-radius: 10px;
+    padding: 0.75rem 1.5rem 0.75rem 1.5rem;
+    border: 1px solid var(--clr-almost-black);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &__learn-btn:hover {
+    background: var(--clr-almost-black);
+    color: var(--clr-almost-white);
+  }
+
+  &__client-grid {
+    margin-top: auto;
   }
 
   &__img-container {
@@ -21,11 +56,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain; */
-    
+
     img {
       display: flex;
       width: 100%;
-      margin: auto;
+      max-width: 400px;
+      margin-inline: auto;
     }
   }
 
