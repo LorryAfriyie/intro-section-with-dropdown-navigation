@@ -1,13 +1,12 @@
 .hero {
   height: 100%;
+
   &__content-grid {
     display: grid;
     gap: 3rem;
     justify-content: center;
     max-width: 1000px;
     margin-inline: auto;
-
-    //height: 100vh;
 
     @media (min-width: 40em) {
       grid-template-columns: repeat(2, 1fr);
@@ -52,16 +51,18 @@
   }
 
   &__img-container {
-    /* background-image: url("/images/image-hero-desktop.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; */
-
     img {
       display: flex;
       width: 100%;
-      max-width: 400px;
       margin-inline: auto;
+    }
+  }
+
+  @media (width < 500px) {
+    &__img-container {
+      img {
+        max-width: 400px;
+      }
     }
   }
 

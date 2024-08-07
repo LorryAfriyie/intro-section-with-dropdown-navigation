@@ -2,6 +2,7 @@ export const Hero = () => {
   return (
     <main className="hero">
       <div className="hero__content-grid">
+        {/* Information container section */}
         <div className="hero__info">
           <h1 className="hero__main-text">Make remote work</h1>
 
@@ -19,8 +20,14 @@ export const Hero = () => {
             <img src="images/client-maker.svg" alt="" />
           </div>
         </div>
+
+        {/* Image container section */}
         <div className="hero__img-container">
-          <img src="images/image-hero-desktop.png" alt="" />
+          <img
+            srcSet="images/image-hero-mobile.png 500w, images/image-hero-desktop.png 1200w"
+            src="images/image-hero-mobile.png"
+            alt="hero-image"
+          />
         </div>
       </div>
     </main>
