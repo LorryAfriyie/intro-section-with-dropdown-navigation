@@ -3,13 +3,14 @@
 
   &__content-grid {
     display: grid;
-    gap: 3rem;
+    gap: 0;
     justify-content: center;
     max-width: 1000px;
     margin-inline: auto;
 
     @media (min-width: 40em) {
       grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
     }
   }
 
@@ -17,6 +18,11 @@
     place-content: center;
     display: flex;
     flex-direction: column;
+    order: 2;
+
+    @media (min-width: 40em) {
+      order: 1;
+    }
   }
 
   &__main-text {
@@ -51,10 +57,15 @@
   }
 
   &__img-container {
+    order: 1;
     img {
       display: flex;
       width: 100%;
       margin-inline: auto;
+    }
+
+    @media (min-width: 40em) {
+      order: 2;
     }
   }
 
