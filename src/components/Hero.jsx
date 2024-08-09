@@ -23,11 +23,14 @@ export const Hero = () => {
 
         {/* Image container section */}
         <div className="hero__img-container">
-          <img
-            srcSet="images/image-hero-mobile.png 500w, images/image-hero-desktop.png 1200w"
-            src="images/image-hero-mobile.png"
-            alt="hero-image"
-          />
+          <picture>
+            <source
+              media="(min-width: 40em)"
+              srcSet="images/image-hero-desktop.png"
+            />
+            <source srcSet="images/image-hero-mobile.png" />
+            <img src="images/image-hero-desktop.png" alt="hero-image" />
+          </picture>
         </div>
       </div>
     </main>
