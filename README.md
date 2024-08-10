@@ -60,7 +60,7 @@ Then crop/optimize/edit your image however you like, add it to your project, and
 
 ### What I learned
 
-Utilising image source set to be able to change an image through the image tag based on the width viewport of a screen
+Utilising image source set to be able to change an image through the image tag based on the width viewport of a screen.
 
 ```html
 <img
@@ -73,10 +73,14 @@ Utilising image source set to be able to change an image through the image tag b
 />
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+Using the picture tag to be able to load different images based on the size of the device width.
+
+```html
+<picture>
+  <source media="(min-width: 40em)" srcset="images/image-hero-desktop.png" />
+  <source srcset="images/image-hero-mobile.png" />
+  <img src="images/image-hero-desktop.png" alt="hero-image" />
+</picture>
 ```
 
 ```js
@@ -105,7 +109,6 @@ Use this section to outline areas that you want to continue focusing on in futur
 ## Author
 
 - Frontend Mentor - [@LorryAfriyie](https://www.frontendmentor.io/profile/LorryAfriyie)
-
 
 ## Acknowledgments
 
