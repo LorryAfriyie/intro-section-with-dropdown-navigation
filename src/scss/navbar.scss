@@ -34,7 +34,12 @@
     list-style: none;
     align-self: center;
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    padding-left: 0;
+
+    @media (width < 60em) {
+      gap: 0;
+    }
 
     @media (width < 40em) {
       flex-direction: column;
