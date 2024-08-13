@@ -39,6 +39,7 @@ export const Navbar = () => {
       <span id="nav-label" hidden>
         Navigation
       </span>
+      
       <button
         type="button"
         ref={btnOpen}
