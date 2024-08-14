@@ -9,18 +9,27 @@ export const Navbar = () => {
 
   useEffect(() => {
     function openMenu() {
-      btnOpen.current.setAttribute("aria-expanded", "true");
-      menu.current.removeAttribute("inert");
-      menu.current.removeAttribute("style");
       btnClose.current.focus();
       body.classList.add("overlay");
+
+      const visibility = menu.current.getAttribute("data-visible");
+
+      if (visibility === "false") {
+        menu.current.setAttribute("data-visible", true);
+        btnOpen.current.setAttribute("aria-expanded", true);
+      }
     }
 
     function closeMenu() {
-      btnOpen.current.setAttribute("aria-expanded", "false");
-      menu.current.setAttribute("inert", "");
       btnClose.current.focus();
       body.classList.remove("overlay");
+
+      const visibility = menu.current.getAttribute("data-visible");
+
+      if (visibility === "true") {
+        menu.current.setAttribute("data-visible", false);
+        btnOpen.current.setAttribute("aria-expanded", false);
+      }
 
       setTimeout(() => {
         menu.current.style.transition = "none";
@@ -39,13 +48,12 @@ export const Navbar = () => {
       <span id="nav-label" hidden>
         Navigation
       </span>
-      
+
       <button
         type="button"
         ref={btnOpen}
         className="navbar__open"
         aria-expanded="false"
-        aria-labelledby="nav-label"
       >
         <img
           src="/images/icon-menu.svg"
@@ -58,7 +66,7 @@ export const Navbar = () => {
       <div
         className="navbar__menu"
         role="dialog"
-        aria-labelledby="nav-label"
+        data-visible="false"
         ref={menu}
       >
         <button
