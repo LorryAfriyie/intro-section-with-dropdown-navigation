@@ -30,10 +30,6 @@ export const Navbar = () => {
         menu.current.setAttribute("data-visible", false);
         btnOpen.current.setAttribute("aria-expanded", false);
       }
-
-      setTimeout(() => {
-        menu.current.style.transition = "none";
-      }, 500);
     }
 
     btnOpen.current.addEventListener("click", openMenu);
