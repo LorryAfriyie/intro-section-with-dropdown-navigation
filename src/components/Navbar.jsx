@@ -51,12 +51,13 @@ export const Navbar = () => {
         className="navbar__open"
         aria-expanded="false"
       >
-        <img
+        <span>Menu</span>
+        {/*  <img
           src="/images/icon-menu.svg"
           alt="open-button"
           width={"40"}
           height={"24"}
-        />
+        /> */}
       </button>
 
       <div

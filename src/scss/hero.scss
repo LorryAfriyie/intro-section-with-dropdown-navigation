@@ -10,6 +10,10 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 3rem;
     }
+
+    @media (max-width: 55em) {
+      margin: 0 2.25rem 0 2.25rem;
+    }
   }
 
   &__info {
@@ -31,6 +35,10 @@
     @media (width < 40em) {
       font-size: 2.5rem;
       text-align: center;
+    }
+
+    @media (max-width: 55em) {
+      font-size: 3.25rem;
     }
   }
 
@@ -69,6 +77,17 @@
 
   &__client-grid {
     margin-top: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+
+    @media (max-width: 35em) {
+      margin: 0 1.5rem 0 1.5rem;
+
+      img {
+        width: 70px;
+      }
+    }
   }
 
   &__img-container {
@@ -91,11 +110,5 @@
         max-width: 400px;
       }
     }
-  }
-
-  &__client-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    place-items: center;
   }
 }
