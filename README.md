@@ -101,8 +101,9 @@ Use this section to outline areas that you want to continue focusing on in futur
 
 ### Useful resources
 
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
+- [Responsive navbar](https://www.youtube.com/watch?v=HbBMp6yUXO0) - This tutorial thoroughly explained how to make a resposive navbar, the lesson I took from this was being able to create a mobile menu that would be responsive with any mobile device viewport.
+
+- [Dropdown menu](https://www.youtube.com/watch?v=S-VeYcOCFZw) - This tutorial explained how to create a dropdown menu. The video shows the basics towards making one, and due to the expected design of this challenge's dropdown, modifications to be aligned with the styling requirements had to be made.
 
 **Note: Delete this note and replace the list above with resources that helped you during the challenge. These could come in handy for anyone viewing your solution or for yourself when you look back on this project in the future.**
 
