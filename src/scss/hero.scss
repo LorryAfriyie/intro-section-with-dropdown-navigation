@@ -100,14 +100,14 @@
   &__img-container {
     order: 1;
 
-    img {
-      width: 440px;
-      display: block;
-      margin: 0 auto;
-    }
-
     @media (min-width: 40em) {
       order: 2;
+    }
+
+    img {
+      width: 400px;
+      display: block;
+      margin: 0 auto;
     }
   }
 
