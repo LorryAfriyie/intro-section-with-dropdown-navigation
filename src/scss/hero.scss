@@ -1,4 +1,9 @@
 .hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
   &__content-grid {
     display: grid;
     gap: 0;
@@ -8,7 +13,7 @@
 
     @media (min-width: 40em) {
       grid-template-columns: repeat(2, 1fr);
-      gap: 3rem;
+      gap: 6.75rem;
     }
 
     @media (max-width: 55em) {
@@ -31,7 +36,7 @@
     margin-bottom: auto;
     margin-block-end: 2rem;
     margin-block-start: 6.25rem;
-    font-size: 4.5rem;
+    font-size: 4.25rem;
 
     @media (width < 40em) {
       font-size: 1.5rem;
@@ -47,10 +52,10 @@
   }
 
   &__sub-text {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     color: var(--clr-almost-gray);
     margin-block-end: 3rem;
-    line-height: 1.75rem;
+    line-height: 1.5rem;
 
     @media (width < 40em) {
       text-align: center;
@@ -87,6 +92,7 @@
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     place-items: center;
+    gap: 2rem;
 
     @media (max-width: 35em) {
       margin: 0 1.5rem 0 1.5rem;
@@ -105,7 +111,7 @@
     }
 
     img {
-      width: 400px;
+      width: 500px;
       display: block;
       margin: 0 auto;
     }
