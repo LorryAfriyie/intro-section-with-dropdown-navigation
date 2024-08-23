@@ -89,9 +89,7 @@ const proudOfThisFunc = () => {
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in future projects. These could be concepts you're still not completely comfortable with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with your own plans for continued development.**
+Techniques that I will need to refine my knowledge and skills is being able to accommodate website assets to fit near accurately to a device's viewport, being able to create responsive texts that adjust based on the device that the website is being displayed on, as well as being able to familiarize myself with more css rules to be able apply more advanced solutions to upskill the aesthetics of a website.
 
 ### Useful resources
 
