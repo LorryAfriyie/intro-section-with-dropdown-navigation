@@ -32,13 +32,23 @@ Users should be able to:
 
 ![](./screenshot.jpg)
 
-Add a screenshot of your solution. The easiest way to do this is to use Firefox to view your project, right-click the page and select "Take a Screenshot". You can choose either a full-height screenshot or a cropped one based on how long the page is. If it's very long, it might be best to crop it.
+Below are screenshots of the website in mobile and desktop view showcasing it in both the website's active and non-active states.
 
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to take the screenshot. FireShot has a free option, so you don't need to purchase it.
+Desktop screenshots:
 
-Then crop/optimize/edit your image however you like, add it to your project, and update the file path in the image above.
+[Desktop screenshot 1](./public/images/screenshots/desktop-preview.jpeg)
 
-**Note: Delete this note and the paragraphs above when you add your screenshot. If you prefer not to add a screenshot, feel free to remove this entire section.**
+[Desktop screenshot 2](./public/images/screenshots/desktop-active-state.jpeg)
+
+Mobile screenshots:
+
+[Mobile screenshot 1](./public/images/screenshots/mobile-preview.jpeg)
+
+[Mobile screenshot 2](./public/images/screenshots/mobile-button-active-state.jpeg)
+
+[Mobile screenshot 3](./public/images/screenshots/mobile-menu-active-state.jpeg)
+
+[Mobile screenshot 4](./public/images/screenshots/mobile-dropdown-menu-active-state.jpeg)
 
 ### Links
 
@@ -89,7 +99,9 @@ const proudOfThisFunc = () => {
 
 ### Continued development
 
-Techniques that I will need to refine my knowledge and skills is being able to accommodate website assets to fit near accurately to a device's viewport, being able to create responsive texts that adjust based on the device that the website is being displayed on, as well as being able to familiarize myself with more css rules to be able apply more advanced solutions to upskill the aesthetics of a website.
+- Techniques that I will need to refine my knowledge and skills is being able to accommodate website assets to fit near accurately to a device's viewport, being able to create responsive texts that adjust based on the device that the website is being displayed on, as well as being able to familiarize myself with more css rules to be able apply more advanced solutions to upskill the aesthetics of a website.
+
+- To be able to make content on a website scale better with better screens.
 
 ### Useful resources
 
