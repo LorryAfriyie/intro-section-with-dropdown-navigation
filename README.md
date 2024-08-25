@@ -14,7 +14,6 @@ This is a solution to the [Intro section with dropdown navigation challenge on F
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
 
 **Note: Delete this note and update the table of contents based on what sections you keep.**
 
@@ -52,8 +51,8 @@ Mobile screenshots:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Website solution URL](https://github.com/LorryAfriyie/intro-section-with-dropdown-navigation)
+- Live Site URL: [Website live URL](https://lorryafriyie.github.io/intro-section-with-dropdown-navigation/)
 
 ## My process
 
@@ -89,12 +88,6 @@ Using the picture tag to be able to load different images based on the size of t
   <source srcset="images/image-hero-mobile.png" />
   <img src="images/image-hero-desktop.png" alt="hero-image" />
 </picture>
-```
-
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
 ```
 
 ### Continued development
