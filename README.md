@@ -29,8 +29,6 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
-
 Below are screenshots of the website in mobile and desktop view showcasing it in both the website's active and non-active states.
 
 Desktop screenshots:
