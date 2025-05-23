@@ -1,3 +1,11 @@
+import img from '/images/image-hero-desktop.png';
+import imgMobile from '/images/image-hero-mobile.png';
+
+import databiz from '/images/client-databiz.svg';
+import audiophile from '/images/client-audiophile.svg';
+import meet from '/images/client-meet.svg';
+import marker from '/images/client-maker.svg';
+
 export const Hero = () => {
   return (
     <main className="hero">
@@ -14,10 +22,10 @@ export const Hero = () => {
           <button className="hero__learn-btn">Learn more</button>
 
           <div className="hero__client-grid">
-            <img src="images/client-databiz.svg" alt="" />
-            <img src="images/client-audiophile.svg" alt="" />
-            <img src="images/client-meet.svg" alt="" />
-            <img src="images/client-maker.svg" alt="" />
+            <img src={databiz} alt="" />
+            <img src={audiophile} alt="" />
+            <img src={meet} alt="" />
+            <img src={marker} alt="" />
           </div>
         </div>
 
@@ -26,10 +34,10 @@ export const Hero = () => {
           <picture>
             <source
               media="(min-width: 40em)"
-              srcSet="images/image-hero-desktop.png"
+              srcSet={img}
             />
-            <source srcSet="images/image-hero-mobile.png" />
-            <img src="images/image-hero-desktop.png" alt="hero-image" />
+            <source srcSet={imgMobile} />
+            <img src={img} alt="hero-image" />
           </picture>
         </div>
       </div>
